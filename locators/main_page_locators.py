@@ -13,3 +13,5 @@ class MainPageLocators:
     MODAL_ORDER_NUMBER = (By.CSS_SELECTOR, "h2.Modal_modal__title__2L34m")
     MODAL_CLOSE_BUTTON = (By.CSS_SELECTOR, "button.Modal_modal__close_modified__3V5XS")
     INGREDIENT_COUNTER = (By.CSS_SELECTOR, "p.counter_counter__num__3nue1")
+    MODAL_OPENED_FORM = (By.CSS_SELECTOR, 'div.Modal_modal_opened__3ISw4')
+    INGREDIENT_MODAL_OPENED_FORM = (By.CSS_SELECTOR, 'section.Modal_modal_opened__3ISw4 Modal_modal__P3_V5')
