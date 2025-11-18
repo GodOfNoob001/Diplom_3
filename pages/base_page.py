@@ -18,7 +18,11 @@ class BasePage:
         return WebDriverWait(self.driver, timeout).until(
             expected_conditions.visibility_of_element_located(locator)
         )
-
+    @allure.step("Дождаться исчезновения локатора")
+    def wait_until_not_visible(self, locator, timeout=10):
+        return WebDriverWait(self.driver, timeout).until_not(
+            expected_conditions.presence_of_element_located(locator)
+        )
 
     @allure.step("Выполнить JS клик")
     def js_click(self, locator):
