@@ -10,7 +10,6 @@ def driver(request):
         driver = webdriver.Chrome()
     else:
         driver = webdriver.Firefox()
-
     driver.implicitly_wait(5)
     yield driver
     driver.quit()

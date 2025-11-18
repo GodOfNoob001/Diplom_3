@@ -39,7 +39,6 @@ class TestMainPage:
         initial_counter = main_page.get_ingredient_counter()
         allure.attach(f"Начальный счетчик: {initial_counter}", name="Initial Counter")
         main_page.drag_ingredient()
-        time.sleep(1.5)
         new_counter = main_page.get_ingredient_counter()
         allure.attach(f"Новый счетчик: {new_counter}", name="New Counter")
         assert new_counter > initial_counter, f"Счетчик не увеличился. Было: {initial_counter}, стало: {new_counter}"

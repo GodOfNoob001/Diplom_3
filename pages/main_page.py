@@ -70,10 +70,8 @@ class MainPage(BasePage):
 
                    console.log('Starting drag and drop simulation');
 
-                   // Создаем DataTransfer
                    const dt = new DataTransfer();
 
-                   // Drag start
                    const dragStart = new DragEvent('dragstart', {
                        bubbles: true,
                        cancelable: true,
@@ -82,7 +80,6 @@ class MainPage(BasePage):
                    source.dispatchEvent(dragStart);
                    console.log('dragstart dispatched');
 
-                   // Drag enter
                    const dragEnter = new DragEvent('dragenter', {
                        bubbles: true,
                        cancelable: true,
@@ -91,7 +88,6 @@ class MainPage(BasePage):
                    target.dispatchEvent(dragEnter);
                    console.log('dragenter dispatched');
 
-                   // Drag over
                    const dragOver = new DragEvent('dragover', {
                        bubbles: true,
                        cancelable: true,
@@ -100,7 +96,6 @@ class MainPage(BasePage):
                    target.dispatchEvent(dragOver);
                    console.log('dragover dispatched');
 
-                   // Drop
                    const drop = new DragEvent('drop', {
                        bubbles: true,
                        cancelable: true,
@@ -109,7 +104,6 @@ class MainPage(BasePage):
                    target.dispatchEvent(drop);
                    console.log('drop dispatched');
 
-                   // Drag end
                    const dragEnd = new DragEvent('dragend', {
                        bubbles: true,
                        cancelable: true,
