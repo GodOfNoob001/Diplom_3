@@ -30,6 +30,7 @@ class MainPage(BasePage):
     @allure.step("Кликнуть на ингредиент")
     def click_ingredient(self):
         self.js_click(MainPageLocators.SPECIAL_BUN)
+        self.wait_visible(MainPageLocators.MODAL_CLOSE_BUTTON)
 
     @allure.step("Проверить видимость модального окна")
     def is_modal_visible(self):
