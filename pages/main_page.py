@@ -47,7 +47,7 @@ class MainPage(BasePage):
     def create_order(self):
         self.drag_ingredient()
         self.js_click(MainPageLocators.PLACE_ORDER_BUTTON)
-        time.sleep(3.5)
+        self.wait_until_not_visible(MainPageLocators.MODAL_OPENED_FORM)
         order_number = self.wait_visible(MainPageLocators.MODAL_ORDER_NUMBER).text
         self.close_modal()
         return order_number
