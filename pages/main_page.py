@@ -41,7 +41,7 @@ class MainPage(BasePage):
     @allure.step("Закрыть модальное окно")
     def close_modal(self):
         self.js_click(MainPageLocators.MODAL_CLOSE_BUTTON)
-        time.sleep(2)
+        self.wait_until_not_visible(MainPageLocators.INGREDIENT_MODAL_OPENED_FORM)
 
     @allure.step("Оформить заказ")
     def create_order(self):
